@@ -1,0 +1,123 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/Arial.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Arial 32.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/Arial 25.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/Scripts/upgrades.gd" type="Script" id=4]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 593.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+margin_right = 1010.0
+margin_bottom = 586.0
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 1010.0
+margin_bottom = 84.0
+custom_fonts/font = ExtResource( 1 )
+text = "UPGRADES"
+align = 1
+
+[node name="HULL" type="Label" parent="."]
+margin_left = 34.0
+margin_top = 254.0
+margin_right = 182.0
+margin_bottom = 292.0
+custom_fonts/font = ExtResource( 2 )
+text = "More hull"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HULL desc" type="Label" parent="."]
+margin_left = 34.0
+margin_top = 300.0
+margin_right = 262.0
+margin_bottom = 393.0
+custom_fonts/font = ExtResource( 3 )
+text = "Gives you +5 health
+Max is 5 upgrades
+price: 50 data cubes"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DAMAGE" type="Label" parent="."]
+margin_left = 314.0
+margin_top = 254.0
+margin_right = 593.0
+margin_bottom = 292.0
+custom_fonts/font = ExtResource( 2 )
+text = "More base damage"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DAMAGE desc" type="Label" parent="."]
+margin_left = 314.0
+margin_top = 300.0
+margin_right = 542.0
+margin_bottom = 393.0
+custom_fonts/font = ExtResource( 3 )
+text = "Gives you +1 damage
+Max is 5 upgrades
+price: 100 data cubes"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DAMAGE2" type="Label" parent="."]
+margin_left = 658.082
+margin_top = 250.784
+margin_right = 967.082
+margin_bottom = 325.784
+custom_fonts/font = ExtResource( 2 )
+text = " in 1.1 of this game ;0
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HULL BUTTON" type="Button" parent="."]
+margin_left = 46.0
+margin_top = 418.0
+margin_right = 254.0
+margin_bottom = 459.0
+custom_fonts/font = ExtResource( 3 )
+text = "BUY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DAMAGE BUTTON" type="Button" parent="."]
+margin_left = 319.0
+margin_top = 418.0
+margin_right = 527.0
+margin_bottom = 459.0
+custom_fonts/font = ExtResource( 3 )
+text = "BUY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="HULL BUTTON" to="." method="_on_HULL_BUTTON_pressed"]
+[connection signal="pressed" from="DAMAGE BUTTON" to="." method="_on_DAMAGE_BUTTON_pressed"]
